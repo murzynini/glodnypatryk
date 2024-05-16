@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<head>   
+    <title>Patriko</title>
+</head>
+
+<body>
+       <label for="odpowiedz">Czy Patriko jest głodny?</label>
+
+       <input type="text" id="odpowiedz">
+
+       <button onclick="sprawdzOdpowiedz()">Sprawdź</button>
+
+      <p id="wynik"></p>
+
+    <script>
+
+            function sprawdzOdpowiedz() {
+
+                    var odpowiedz = document.getElementById("odpowiedz").value.toUpperCase();
+
+                  var wynik = document.getElementById("wynik");
+
+    if         (odpowiedz === "TAK") 
+    {
+                wynik.textContent = "Patryk powinien zjeść cały obiad złożony z dwóch posiłków!";
+     } 
+     else if (odpowiedz === "NIE") 
+     {
+                wynik.textContent = "Patryk nie powinien jeść całego obiadu, ale może zjeść tylko drugie danie.";
+     }
+      else if (odpowiedz === "NIE WIEM") 
+      {
+                wynik.textContent = "Patryk nie wie czy powinien zjeść obiad, więc niech zje zupę.";
+    } 
+    else 
+    {
+                wynik.textContent = "Niepoprawna odpowiedź. Proszę wpisać 'TAK', 'NIE' lub 'NIE WIEM'.";
+     }
+        }
+    </script>
+</body>
+</html>
